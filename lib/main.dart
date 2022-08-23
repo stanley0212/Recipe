@@ -40,7 +40,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   late TabController _tabcontroller;
   final List<Tab> topTabs = <Tab>[
-    new Tab(text: "Beef"),
+    new Tab(text: "Pasta"),
     new Tab(text: "Lamp"),
     new Tab(text: "Pork"),
     new Tab(text: "Chicken"),
@@ -111,7 +111,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             padding: const EdgeInsets.all(8.0),
             child: Container(
               width: double.maxFinite,
-              height: 350.0,
+              //height: MediaQuery.of(context).size.height,
+              height: 650.0,
               child: TabBarView(controller: _tabcontroller, children: [
                 Container(
                     child: _isLoading
@@ -133,24 +134,24 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               ]),
             ),
           ),
-          Divider(),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: const [
-                Text('aaa'),
-                Text('bbb'),
-                Text('ccc'),
-              ],
-            ),
-          ),
-          Divider(),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text('test'),
-          ),
+          // Divider(),
+          // Padding(
+          //   padding: const EdgeInsets.all(8.0),
+          //   child: Row(
+          //     crossAxisAlignment: CrossAxisAlignment.start,
+          //     mainAxisAlignment: MainAxisAlignment.start,
+          //     children: const [
+          //       Text('aaa'),
+          //       Text('bbb'),
+          //       Text('ccc'),
+          //     ],
+          //   ),
+          // ),
+          // Divider(),
+          // Padding(
+          //   padding: const EdgeInsets.all(8.0),
+          //   child: Text('test'),
+          // ),
         ],
       ),
     );
